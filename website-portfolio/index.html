@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">bujji</a>
+        <ul>
+            <li><a href="#" class="active" >Home</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./img/stars.png" id="stars">
+        <img src="./img/moon.png" id="moon">
+        <img src="./img/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Himabindu</h2>
+        <a href="#sec" id="btn">About me</a>
+        <img src="./img/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Random Text</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci dolor blanditiis illo amet sit, dolore doloribus repellendus dignissimos minus quod temporibus perspiciatis dicta necessitatibus facilis non placeat, id labore saepe expedita pariatur tenetur omnis in, impedit sed? Odit ab quidem odio saepe aspernatur et veritatis quibusdam necessitatibus repellat ipsa, expedita architecto voluptatibus laboriosam ullam voluptas debitis dolor pariatur sunt perspiciatis delectus, molestias inventore vitae explicabo. Explicabo sequi ut sit illo nulla aut tempora inventore, qui provident voluptate unde suscipit fugit? At nesciunt, nemo, sequi quis accusamus magni dicta laboriosam ex exercitationem officiis, fugiat quo est iste vero perferendis quibusdam ipsa!<br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptas impedit nostrum perspiciatis maxime, eum temporibus. Pariatur unde architecto ut perspiciatis voluptatibus dicta numquam corporis, amet reprehenderit maxime dolor vitae nisi maiores perferendis, neque adipisci ipsa iure vero voluptatum aliquid labore, laudantium vel atque. Quod doloremque neque reiciendis possimus laboriosam quae tempore delectus cumque odit placeat quidem hic debitis molestias expedita velit natus omnis modi consequuntur doloribus fuga voluptatum, quaerat voluptatibus dolor earum. Eaque vel animi consequuntur placeat sequi enim, a quas perferendis quae adipisci debitis rem nobis est autem ipsa eum tempore sapiente accusamus non quis nulla. Voluptas, culpa?<br><br>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto quos odit voluptas? Commodi, ipsam molestias dolor, amet a in neque totam cupiditate eaque expedita exercitationem tempore vel laborum deserunt perspiciatis. Voluptate nulla id ipsum, quaerat nobis quibusdam nihil iste ea, mollitia aliquid aut laudantium officia, magnam porro sed aliquam autem dolor libero? Molestias magni, facere alias explicabo esse quae numquam maiores ex. Eaque, iste corrupti amet iure odit libero expedita dicta totam? Dolor perferendis deserunt ducimus dolore tenetur iure dignissimos, porro cumque corrupti excepturi recusandae veniam expedita praesentium? Sapiente animi reiciendis qui? Tempora animi suscipit minus optio ullam ducimus quae!</p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind= document.getElementById('mountains_behind');
+        let text= document.getElementById('text');
+        let btn= document.getElementById('btn');
+        let mountains_front= document.getElementById('mountains_front');
+        let header= document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value=window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top = value * 1.05 +'px';
+            mountains_behind.style.top = value * 0.5 +'px';
+            mountains_front.style.top = value * 0 +'px';
+            text.style.right = value * 1 +'px';
+            text.style.maginTop = value * 1 +'px';
+            btn.style.maginTop = value * 1.5 +'px'
+            header.style.top = value * 0.5 +'px';
+        })
+    </script>
+    <p id="a">Copyright Ⓒ 2022. All Rights Reserved</p>
+</body>
+</html>
